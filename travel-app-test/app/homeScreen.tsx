@@ -1,9 +1,12 @@
-import { View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 import React from "react";
 import { ChevronDown, ChevronUp } from "@tamagui/lucide-icons";
 import { Sheet, SheetProps, useSheet } from "@tamagui/sheet";
 import { useState } from "react";
 import { Button, H1, H2, Input, Paragraph, XStack, YStack } from "tamagui";
+import LoginComponent from "../components/loginInput";
+import LoginCheck from "../components/loginCheck";
+
 
 const spModes = ["percent", "constant", "fit", "mixed"] as const;
 
@@ -57,23 +60,23 @@ const HomeScreen = () => {
           exitStyle={{ opacity: 0 }}
         />
         {/* <Sheet.Handle /> */}
-        <Sheet.Frame
-          padding="$4"
-          justifyContent="center"
-          alignItems="center"
-          space="$5"
-        >
-          <Button
-            
-            size={50}
-            circular
-            icon={ChevronDown}
-            onPress={() => setOpen(false)}
-          />
+        <Sheet.Frame alignItems="center">
+          <View style={styles.inputContainer}>
+            <LoginComponent username={""} password={""} />
+            <LoginCheck size={12} />
+          </View>
+          
         </Sheet.Frame>
       </Sheet>
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  inputContainer: {
+    paddingVertical: 35,
+  },
+  button: {},
+});
 
 export default HomeScreen;
