@@ -7,28 +7,26 @@ import {
   H2,
   Image,
   Paragraph,
+  ScrollView,
   XStack,
   YStack,
 } from "tamagui";
 import { Ionicons } from "@expo/vector-icons";
-
+import React from "react";
 
 export function CardDemo() {
   return (
-    <YStack style={{ padding: 15 }} space>
-      <DemoCard height={"90%"} />
-      <DemoCard height={"90%"} />
-      <DemoCard height={"90%"} />
-      <DemoCard height={"90%"} />
-      <DemoCard height={"90%"} />
+    <YStack style={{padding: 15 }} space>
+
+        <DemoCard height={400} />
+      
     </YStack>
   );
 }
 
-
 export function DemoCard(props: CardProps) {
   return (
-    <Card bordered {...props}>
+    <Card justifyContent="center" alignItems="center" bordered {...props}>
       <Card.Header flexDirection="row" padded>
         <Avatar size={100} borderRadius={50}>
           <Avatar.Image
@@ -63,7 +61,6 @@ export function DemoCard(props: CardProps) {
 const styles = StyleSheet.create({
   reactContainer: {
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
     paddingBottom: 25,
     paddingHorizontal: 10,

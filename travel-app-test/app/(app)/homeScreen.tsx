@@ -1,15 +1,20 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { Avatar, XStack } from "tamagui";
 import { CardDemo } from "../../components/card";
 import MySafeAreaView from "../../shared/MySafeAreaView";
+import { ScrollView } from "tamagui";
 
 const HomeScreen = () => {
   return (
-    <MySafeAreaView style={{height:"100%"}}>
-      <View>
+    <MySafeAreaView style={{ height: "100%" }}>
+      <ScrollView>
         <CardDemo />
-      </View>
+        <CardDemo />
+        <CardDemo />
+        <CardDemo />
+        <CardDemo />
+        <CardDemo />
+      </ScrollView>
     </MySafeAreaView>
   );
 };
