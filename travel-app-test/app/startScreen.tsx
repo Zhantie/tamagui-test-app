@@ -36,8 +36,11 @@ const HomeScreen = () => {
 
   return (
     <>
-      <YStack space>
-        <XStack space $sm={{ flexDirection: "column", alignItems: "center" }}>
+      <YStack alignItems="center" space>
+        <XStack space $sm={{ flexDirection: "column", alignItems: "center"}}>
+          <H1>Travee</H1>
+        </XStack>
+        <XStack space $sm={{ flexDirection: "column", alignItems: "center"}}>
           <Button onPress={() => setOpen(true)}>Open</Button>
         </XStack>
       </YStack>
