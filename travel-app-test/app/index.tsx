@@ -1,24 +1,29 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ImageBackground } from "react-native";
 import React from "react";
 import { TamaguiProvider, Button } from "tamagui";
 import config from "../tamagui.config";
-import HomeScreen from "./startScreen";
+import HomeScreen from "./(app)/startScreen";
 import MySafeAreaView from "../shared/MySafeAreaView";
 
 const Index = () => {
   return (
-    <MySafeAreaView edges={["top"]} style={styles.fullSceen} >
+    <View style={styles.backGround}>
       <TamaguiProvider config={config}>
-        <HomeScreen />
+        <MySafeAreaView edges={["bottom"]} style={styles.fullSceen}>
+          <HomeScreen />
+        </MySafeAreaView>
       </TamaguiProvider>
-    </MySafeAreaView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  backGround: {
+    backgroundColor: "blue",
+  },
   fullSceen: {
     height: "100%",
-    backgroundColor: "green",
+    backgroundColor: "blue",
   },
 });
 

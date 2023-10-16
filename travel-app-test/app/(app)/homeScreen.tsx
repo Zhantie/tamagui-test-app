@@ -6,16 +6,13 @@ import { ScrollView } from "tamagui";
 
 const HomeScreen = () => {
   return (
-    <MySafeAreaView style={{ height: "100%" }}>
-      <ScrollView>
-        <CardDemo />
-        <CardDemo />
-        <CardDemo />
-        <CardDemo />
-        <CardDemo />
-        <CardDemo />
-      </ScrollView>
-    </MySafeAreaView>
+    <View>
+      <MySafeAreaView >
+        <ScrollView>
+          <CardDemo />
+        </ScrollView>
+      </MySafeAreaView>
+    </View>
   );
 };
 

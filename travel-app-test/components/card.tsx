@@ -16,10 +16,8 @@ import React from "react";
 
 export function CardDemo() {
   return (
-    <YStack style={{padding: 15 }} space>
-
-        <DemoCard height={400} />
-      
+    <YStack style={{ padding: 15 }} space>
+      <DemoCard height={400} />
     </YStack>
   );
 }
@@ -34,8 +32,10 @@ export function DemoCard(props: CardProps) {
             src="https://images.unsplash.com/photo-1548142813-c348350df52b?&w=150&h=150&dpr=2&q=80"
           />
         </Avatar>
-        <H2>Sony A7IV</H2>
-        <Paragraph>Now available</Paragraph>
+        <View>
+          <H2>Sony A7IV</H2>
+          <Paragraph>Now available</Paragraph>
+        </View>
       </Card.Header>
 
       <Card.Footer padded>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#DAFEE4",
-    width: 161,
+    paddingHorizontal: 50,
     height: 40,
     borderRadius: 25,
   },
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#E6E8EC",
-    width: 161,
+    paddingHorizontal: 50,
     height: 40,
     borderRadius: 25,
   },
